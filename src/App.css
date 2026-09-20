@@ -1,4 +1,147 @@
+body{
+    background-image: url("images/backdrop.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: darken;
+    min-height: 100vh;
+}
 .done {
   text-decoration: line-through;
   opacity: 0.5;
+}
+
+.inputs{
+   display: flex;
+  align-items: center;     
+  justify-content: center;
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255);
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.7);
+  margin-bottom: 10px;
+}
+.inputs input{
+  background: transparent; 
+  border: none; 
+  outline: none; 
+  flex: 1;
+  color: #3D4757;
+}
+.addtask{
+  background-color: #5B8DEF; 
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+input::placeholder { color: #A8B0BE; }
+
+.allcard{
+  
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  width: 30%;
+  margin: auto;
+  height: auto;
+  padding: 40px;
+}
+
+.filters{
+   display: flex;
+  align-items: center;     
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50px;
+  flex:1;
+  background-color: rgba(255, 255, 255, 0.5);
+
+}
+
+.pill{
+  background: transparent;
+  border: none;
+  color: #6B7688;
+  flex: 1;
+  padding: 10px 18px;
+  border-radius: 50px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.pill.active{
+ background-color: #C7D8F5; 
+ color: #2C4470; 
+ font-weight: 600;
+ border: 1px solid #bbd0f5;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+}
+
+li button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0;
+}
+
+.delete {
+  margin-left: auto;
+}
+
+li.done {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+li.done span {
+  text-decoration: line-through;
+  color: #9AA3B2;
+}
+.removeitem{
+  margin-left: auto
+}
+.removeitem img{
+  height: 40px;
+  width: 40px;
+
+}
+
+.check {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #C9D1DD;
+  background: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1;
+  padding: 0;
+  transition: all 0.2s;
+}
+
+.check.done {
+  background: #5B8DEF;
+  border-color: #5B8DEF;
+  color: white;
 }

@@ -33,12 +33,14 @@ function App() {
   })
 
   return (
-    <div>
-      <button onClick={() => setFilter("All")} >All</button> 
-       <button onClick={() => setFilter("Active")}>Active</button>
-        <button onClick={() => setFilter("Done")}>Done</button>
+    <div className="allcard">
+      
       <AddForm onAdd={handleAdd}/>
-    
+      <span className="filters">
+      <button className={filter === "All" ? "pill active" : "pill"} onClick={() => setFilter("All")} >All</button> 
+       <button className={filter === "Active" ? "pill active" : "pill"} onClick={() => setFilter("Active")}>Active</button>
+        <button className={filter === "Done" ? "pill active" : "pill"} onClick={() => setFilter("Done")}>Done</button>
+      </span>
 
       <TodoList visible={visible} toggleTodo={toggleTodo}  deleteTodo={deleteTodo}/>
       {visible.length > 0 && <p>{todos.filter( n  => n.done).length} of {todos.length} completed</p>}
